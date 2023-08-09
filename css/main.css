@@ -20,6 +20,7 @@ a {
 
 }
 
+
 .header {
     position: fixed;
     width: 100%;
@@ -27,23 +28,40 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 22px;
+    padding: 15px;
 }
 
+.header ul {
+    display: flex;
+    list-style: none;
+}
+
+.header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-left: 40px;
+}
+
+
+.header ul li {
+    margin-right: 50px;
+}
+
+/* ////////////// */
+
 .headerAfter {
+    position: fixed;
+    width: 100%;
+    z-index: 150;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    /* background: linear-gradient(#200016, #10001f); */
     background-color: #200016;
-    position: fixed;
-    z-index: 10;
-    width: 100%;
+    padding: 15px;
+
 }
 
 .headerAfter ul {
-
     display: flex;
     list-style: none;
 }
@@ -55,44 +73,166 @@ a {
 }
 
 
-.headerAfter ul li a {
-    margin-right: 50px;
-    transition: 0.3s;
-}
-
-
-
-.header .logo {
-    font-size: 30px;
-    text-transform: uppercase;
-    margin-left: 40px;
-}
-
-.header ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    margin-right: 30px
-}
-
-.header ul li {
+.headerAfter ul li {
     margin-right: 50px;
 }
 
-section ul li a {
-    padding: 6px 15px;
-    border-radius: 20px;
-    /* margin-right: 20px */
+
+@media (min-width: 768px) {
+    section ul li a {
+        padding: 6px 15px;
+        border-radius: 20px;
+        /* margin-right: 20px */
+    }
+
+    section ul li :hover,
+    .active {
+        background-color: white;
+        color: #200016;
+        transition: 0.3s;
+
+    }
 }
 
-section ul li :hover,
-.active {
-    background-color: white;
-    color: #200016;
-    transition: 0.3s;
+
+/* ////////mune/////// */
+
+nav .toggle-menu {
+    color: rgb(221, 221, 221);
+    font-size: 22px;
+    margin-right: 50px;
+    padding: 20px;
 
 }
+
+
+@media (max-width: 767px) {
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        text-transform: uppercase;
+    }
+
+    .nav-links a {
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 2px solid transparent;
+        transition: 0.5s ease;
+        transform: translateX(0%);
+    }
+
+    .nav-links a:hover {
+        color: #777;
+        letter-spacing: 2px;
+        padding-left: 35px;
+        transition: 0.4s;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 5px;
+        transition: all 0.5s ease;
+    }
+
+    @media only screen and (max-width: 760px) {
+        nav {
+            justify-content: space-between;
+            padding: 0 5vw;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            position: absolute;
+            right: 0;
+            top: 8vh;
+            background: linear-gradient(#1d0335a2, #7c1e5e);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+            height: 50vh;
+            margin-top: 15px;
+            padding: 0;
+            transform: translateX(100%);
+            transition: All 0.5s ease-in;
+            border-radius: 10px;
+            
+            
+        }
+
+        .nav-links a {
+            opacity: 0;
+
+        }
+
+        .burger {
+            display: block;
+        }
+
+    }
+
+
+
+    @media only screen and (max-width: 460px) {
+        .nav-links {
+            width: 40%;
+            transition: All 0.5s ease;
+        }
+    }
+
+    .nav-active {
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+}
+
+
+
+
+
+
+
 
 .main {
     position: relative;

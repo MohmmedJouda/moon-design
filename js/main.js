@@ -52,11 +52,34 @@ window.onscroll = function () {
   if (value > 600) {
     hed.classList.remove("header");
     hed.classList.add("headerAfter");
-    // console.log('scsess')
   } else {
     hed.classList.remove("headerAfter");
     hed.classList.add("header");
   }
-
-
 };
+
+////////
+
+const navSlide = () => {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
+
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.5
+        }s `;
+      }
+    });
+    burger.classList.toggle("toggle");
+  });
+  //
+};
+
+navSlide();
