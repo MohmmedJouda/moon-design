@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(#200016, #10001f);
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 150;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 22px;
+}
+
+.headerAfter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* background: linear-gradient(#200016, #10001f); */
+    background-color: #200016;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
+.headerAfter ul {
+
+    display: flex;
+    list-style: none;
+}
+
+.headerAfter .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-left: 40px;
+}
+
+
+.headerAfter ul li a {
+    margin-right: 50px;
+    transition: 0.3s;
+}
+
+
+
+.header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-left: 40px;
+}
+
+.header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin-right: 30px
+}
+
+.header ul li {
+    margin-right: 50px;
+}
+
+section ul li a {
+    padding: 6px 15px;
+    border-radius: 20px;
+    /* margin-right: 20px */
+}
+
+section ul li :hover,
+.active {
+    background-color: white;
+    color: #200016;
+    transition: 0.3s;
+
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.main::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top, #200016, transparent);
+}
+
+.main img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+#moon {
+    mix-blend-mode: screen;
+    transform: translateY(50px);
+    object-fit: cover;
+    width: 750px;
+    height: 750px;
+
+}
+
+.textMoon {
+    color: white;
+    text-transform: uppercase;
+    transform: translateY(-140px);
+
+}
+
+.content {
+    color: white;
+    padding: 30px;
+}
+
+.content h2 {
+    margin: 20px;
+    font-size: 30px;
+}
+
+.content p {
+    margin: 20px;
+}
